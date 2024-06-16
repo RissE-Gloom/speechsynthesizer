@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Синтезатор речи</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="https://ucarecdn.com/7634159c-67c8-45e4-870d-928e4881c753/vecteezy_voiceicondesign_34098367.ico">
+    <script src="https://use.fontawesome.com/332165cd8e.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="form">
+                <label for="voices">Голоса</label>
+                <select class="form-control" id="voices"></select>
+            </div>
+
+            <div class="form">
+                <label for="rate">Скорость (<span class="rate-value">1</span>)</label>
+                <input type="range" class="form-control-range" id="rate" min="0.5" max="3" value="1" step="0.1">
+            </div>
+
+            <div class="form">
+                <label for="pitch">Питч (<span class="pitch-value">1</span>)</label>
+                <input type="range" class="form-control-range" id="pitch" min="0" max="2" value="1" step="0.1">
+            </div>
+        </div>
+
+        <div class="form">
+            <label for="text">Текст</label>
+            <textarea class="form-control" id="text" rows="4"></textarea>
+        </div>
+
+        <div class="text-right">
+            <button class="btn btn-light" id="btn-stop">Стоп</button>
+            <button class="btn btn-success" id="btn-start" type="submit">Старт</button>
+            <button class="btn btn-danger" id="btn-pause" type="submit">Пауза</button>
+            <button class="btn btn-primary" id="btn-resume">Продолжить</button>
+            <button class="btnhelp">Хелпа</button>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="btnclosed"><i class="fa fa-times" aria-hidden="true"></i></div>
+        <p>
+            <span>По кнопкам:</span> <br>
+            <span>Стоп</span> - Остановить озвучку.<br>
+            <span>Старт</span> - отвечает за первый запуск.<br>
+            <span>Пауза</span> - Поставить на паузу.<br>
+            <span>Продолжить</span> - Продолжить слушать после паузы. <br>
+            <span>Скорость</span> - Выбор скорости с которой будет идти чтение. <br>
+            <span>Питч</span> - Отвечает за тональность голоса. <br>
+            <br>
+            Если не пошло воспроизвение после клика на "старт", нажмите на "стоп", <br> потом снова на "старт". <br>
+            <br>
+            Если возники иные проблемы, можете рассказать о них сюда<br>  - SnowChanterelle@yandex.ru
+        </p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
