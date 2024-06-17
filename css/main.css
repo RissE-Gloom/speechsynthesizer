@@ -21,11 +21,10 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 800px;
 }
 
 .container {
-  width: 600px;
+  width: clamp(15.5rem, 11.2037rem + 21.4815vw, 35rem);
   padding: 30px;
   border-radius: 12px;
   background: #262626;
